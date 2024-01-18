@@ -1,0 +1,11 @@
+---
+applications:
+  - name: cf-stats
+    instances: 1
+    memory: 64MB
+    buildpacks:
+      - binary_buildpack
+    command: ./cf-stats
+    env:
+      CF_USER: ((cf_user))
+      CF_PASSWORD: ((cf_password))
